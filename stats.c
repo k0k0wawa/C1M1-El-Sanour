@@ -1,16 +1,23 @@
 #include "stats.h"
 
+/* Size of the Data Set */
+#define SIZE (40)
+
 /**
  * @brief The main program which does some staics operations
  * 
  * @return 0 on success and 1 otherwise
  */
 int main(void) {
-    int arr[] = {0, 1, 2, 3, 5, 4};
-    int len = 6;
+    int arr[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
+                     114, 88,   45,  76, 123,  87,  25,  23,
+                     200, 122, 150, 90,   92,  87, 177, 244,
+                     201,   6,  12,  60,   8,   2,   5,  67,
+                       7,  87, 250, 230,  99,   3, 100,  90};
 
-    print_array(arr, len);
-    print_statistics(arr, len);
+    print_array(arr, SIZE);
+    print_statistics(arr, SIZE);
+    print_array(arr, SIZE);
 
     return (0);
 }
