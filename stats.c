@@ -24,8 +24,7 @@ int main(void) {
 
 
 int print_statistics(int arr[], int len) {
-    int median, max, min;
-    float mean;
+    int median, max, min, mean;
 
     median = find_median(arr, len);
     mean = find_mean(arr, len);
@@ -33,7 +32,7 @@ int print_statistics(int arr[], int len) {
     min = find_minimum(arr, len);
 
     printf("The statics are: \n");
-    printf("The median is: %d\nThe mean is: %.2f\nThe max is: %d\nThe min is: %d\n", median, mean, max, min);
+    printf("The median is: %d\nThe mean is: %d\nThe max is: %d\nThe min is: %d\n", median, mean, max, min);
     printf("\n");
     return (0);
 }
@@ -64,14 +63,14 @@ int find_median(int arr[], int len) {
 
 float find_mean(int arr[], int len) {
     int i;
-    float mean, sum;
+    int mean, sum;
 
     sum = 0;
 
-    for (i = 1; i < len; i++) {
-	    sum += i; 
+    for (i = 0; i < len; i++) {
+        sum += arr[i]; 
     }
-    mean = (sum + 0.0) / (float)len ;
+    mean = sum / len ;
 
     return (mean);
 }
